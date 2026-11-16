@@ -1,0 +1,343 @@
+:root {
+    --primary: #4f5ff0;
+    --primary-dark: #3948d8;
+    --primary-soft: #eef0ff;
+    --text: #1d2340;
+    --muted: #747b91;
+    --border: #e2e5ef;
+    --surface: #ffffff;
+    --page: #f4f6fb;
+    --shadow: 0 8px 25px rgba(34, 45, 100, 0.07);
+}
+
+/* Configurações gerais */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--text);
+    background: var(--page);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Estrutura principal */
+
+.app-shell {
+    width: min(1440px, 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 18px 28px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+
+.topbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 30px;
+    color: #fff;
+    background: linear-gradient(110deg, #4c5ced, #5b69f5);
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 8px 24px rgba(65, 79, 218, 0.18);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    font-size: clamp(1.05rem, 2vw, 1.45rem);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.brand-mark svg {
+    width: 25px;
+    height: 25px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.topbar-label {
+    padding: 8px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+
+.logout-link {
+    padding: 9px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.logout-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Conteúdo principal */
+
+.container {
+    flex: 1;
+    width: 100%;
+    padding: 55px 35px 70px;
+    background: var(--surface);
+}
+
+.page-heading {
+    max-width: 760px;
+    margin-bottom: 42px;
+}
+
+.welcome-label {
+    margin: 0 0 12px;
+    color: var(--primary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.page-heading h1 {
+    margin: 0;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    letter-spacing: -0.055em;
+}
+
+.page-description {
+    margin: 15px 0 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Cartões */
+
+.grade-servicos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(34, 45, 100, 0.12);
+}
+
+.card-imagem {
+    height: 210px;
+    overflow: hidden;
+    background: var(--primary-soft);
+}
+
+.card-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card:hover .card-imagem img {
+    transform: scale(1.04);
+}
+
+.card-corpo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.card-categoria {
+    margin-bottom: 13px;
+    padding: 7px 10px;
+    color: var(--primary);
+    background: var(--primary-soft);
+    border-radius: 6px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.card-corpo h2 {
+    margin: 0 0 12px;
+    font-size: 1.3rem;
+    letter-spacing: -0.03em;
+}
+
+.card-corpo p {
+    flex: 1;
+    margin: 0 0 25px;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+/* Botões */
+
+.botao {
+    width: 100%;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 15px;
+    color: #fff;
+    background: var(--primary);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.botao:hover {
+    background: var(--primary-dark);
+}
+
+/* Rodapé */
+
+.footer {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    background: var(--primary);
+    border-radius: 0 0 16px 16px;
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+.footer-separator {
+    opacity: 0.65;
+}
+
+/* Responsividade */
+
+@media (max-width: 950px) {
+    .app-shell {
+        padding: 12px 12px 0;
+    }
+
+    .container {
+        padding: 40px 25px 55px;
+    }
+
+    .grade-servicos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .app-shell {
+        padding: 0;
+    }
+
+    .topbar {
+        min-height: 66px;
+        padding: 0 16px;
+        border-radius: 0;
+    }
+
+    .brand {
+        gap: 9px;
+        font-size: 0.92rem;
+    }
+
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+    }
+
+    .topbar-label {
+        display: none;
+    }
+
+    .logout-link {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+
+    .container {
+        padding: 35px 18px 50px;
+    }
+
+    .page-heading {
+        margin-bottom: 30px;
+    }
+
+    .grade-servicos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-imagem {
+        height: 190px;
+    }
+
+    .card-corpo {
+        padding: 22px;
+    }
+
+    .footer {
+        border-radius: 0;
+        font-size: 0.72rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}

@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ===== Configurações gerais ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4f5ff0;
+    --primary-dark: #3948d8;
+    --background: #f5f6fa;
+    --surface: #ffffff;
+    --text: #202438;
+    --text-secondary: #73798d;
+    --border: #e6e8f0;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--text);
+    background: var(--background);
+}
+
+
+/* ===== Estrutura principal ===== */
+
+.app-shell {
+    width: min(1440px, 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 18px 28px 0;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+
+/* ===== Cabeçalho ===== */
+
+.topo {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    color: white;
+    background: linear-gradient(110deg, #4c5ced, #5b69f5);
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 8px 24px rgba(65, 79, 218, 0.18);
+}
+
+.topo-conteudo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    color: inherit;
+    text-decoration: none;
+    font-size: clamp(1.05rem, 2vw, 1.45rem);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.brand-mark svg {
+    width: 25px;
+    height: 25px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.topbar-label {
+    padding: 8px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+
+.botao-sair {
+    padding: 9px 15px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.botao-sair:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ===== Conteúdo principal ===== */
+
+.conteudo {
+    flex: 1;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 45px 35px 55px;
+    background: var(--surface);
+}
+
+.introducao {
+    margin-bottom: 35px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.introducao h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.introducao p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ===== Cards ===== */
+
+.grade-calendario {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--surface);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(30, 40, 90, 0.08);
+}
+
+.card-icone {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef0ff;
+    color: var(--primary);
+    border-radius: 11px;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.card-conteudo {
+    flex: 1;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* ===== Botões ===== */
+
+.botao-acessar {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    transition: background 0.2s;
+}
+
+.botao-acessar:hover {
+    background: var(--primary-dark);
+}
+
+
+/* ===== Mensagem de disponibilidade ===== */
+
+.feature-message {
+    display: none;
+    width: fit-content;
+    max-width: 100%;
+    margin: 30px auto 0;
+    padding: 13px 22px;
+    color: var(--primary-dark);
+    background: #eef0ff;
+    border: 1px solid #dce0ff;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.feature-message.visivel {
+    display: block;
+    animation: aparecer 0.25s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ===== Rodapé ===== */
+
+.footer {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    background: var(--primary);
+    border-radius: 0 0 16px 16px;
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+.footer-separator {
+    opacity: 0.65;
+}
+
+
+/* ===== Responsividade ===== */
+
+/* Tablets e telas menores */
+@media (max-width: 950px) {
+
+    .app-shell {
+        padding: 12px 12px 0;
+    }
+
+    .grade-calendario {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+
+    .app-shell {
+        padding: 0;
+    }
+
+    .topo {
+        min-height: 66px;
+        padding: 0 16px;
+        border-radius: 0;
+    }
+
+    .brand {
+        gap: 9px;
+        font-size: 0.92rem;
+    }
+
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .topbar-label {
+        display: none;
+    }
+
+    .botao-sair {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+
+    .conteudo {
+        padding: 35px 18px;
+    }
+
+    .introducao h2 {
+        font-size: 25px;
+    }
+
+    .grade-calendario {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .footer {
+        border-radius: 0;
+        font-size: 0.72rem;
+    }
+
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 350px) {
+
+    .brand {
+        font-size: 0.8rem;
+    }
+
+    .botao-sair {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+}

@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Área de documentos do Sistema de Gestão Acadêmica.">
+
+    <title>Documentos | Sistema de Gestão Acadêmica</title>
+
+    <!-- Fonte padrão do SIGA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/documento.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <!-- Cabeçalho -->
+        <header class="topbar">
+
+            <a href="index.html" class="brand">
+
+                <span class="brand-mark" aria-hidden="true">
+
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M3 9.2 12 4l9 5.2-9 5.2L3 9.2Z"
+                              stroke="currentColor"
+                              stroke-width="1.8"
+                              stroke-linejoin="round"/>
+
+                        <path d="M6.5 11.4v4.1c3.5 2.8 7.5 2.8 11 0v-4.1M21 9.2v5"
+                              stroke="currentColor"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+
+                </span>
+
+                <span>Sistema de Gestão Acadêmica</span>
+
+            </a>
+
+            
+            <div class="header-actions">
+
+                <span class="topbar-label">Portal do aluno</span>
+
+                <nav class="menu-navegacao" aria-label="Navegação principal">
+                    <button
+                        type="button"
+                        class="menu-botao"
+                        aria-expanded="false"
+                        aria-controls="menu-opcoes">
+                        ☰ Menu
+                    </button>
+
+                    <div class="menu-opcoes" id="menu-opcoes" hidden>
+                        <a href="index.html">Página inicial</a>
+                        <a href="curso.html">Meus Cursos</a>
+                        <a href="calendario.html">Calendário</a>
+                        <a href="documento.html" aria-current="page">Documentos</a>
+                    </div>
+                </nav>
+
+                <a href="login.html" class="logout-link">Sair</a>
+
+            </div>
+
+
+        </header>
+
+
+        <!-- Conteúdo principal -->
+        <main class="container">
+
+            <!-- Apresentação -->
+            <section class="page-heading">
+
+                <p class="welcome-label">ÁREA DO ALUNO</p>
+
+                <h1>Documentos</h1>
+
+                <p class="page-description">
+                    Consulte suas informações acadêmicas e acompanhe
+                    sua situação no sistema.
+                </p>
+
+            </section>
+
+
+            <!-- Opções de documentos -->
+            <section class="document-grid"
+                     aria-label="Opções de documentos">
+
+
+                <!-- Notas -->
+                <article class="document-card">
+
+                    <div class="document-icon">
+
+                        <svg viewBox="0 0 24 24" fill="none"
+                             aria-hidden="true">
+
+                            <path d="M7 3.5h7l4 4V20H7a2 2 0 0 1-2-2V5.5a2 2 0 0 1 2-2Z"
+                                  stroke="currentColor"
+                                  stroke-width="1.7"
+                                  stroke-linejoin="round"/>
+
+                            <path d="M14 3.5v4h4M8.5 12h7M8.5 15.5h7"
+                                  stroke="currentColor"
+                                  stroke-width="1.7"
+                                  stroke-linecap="round"/>
+
+                        </svg>
+
+                    </div>
+
+                    <div class="document-content">
+
+                        <h2>Notas</h2>
+
+                        <p>
+                            Consulte seu desempenho e suas avaliações acadêmicas.
+                        </p>
+
+                    </div>
+
+                    <button type="button"
+                            class="document-button"
+                            data-option="Notas">
+
+                        Acessar
+                        <span aria-hidden="true">→</span>
+
+                    </button>
+
+                    <span class="availability">
+                        <span class="status-dot"></span>
+                        Em breve
+                    </span>
+
+                </article>
+
+
+                <!-- Financeiro -->
+                <article class="document-card">
+
+                    <div class="document-icon">
+
+                        <svg viewBox="0 0 24 24" fill="none"
+                             aria-hidden="true">
+
+                            <rect x="3" y="5" width="18" height="14"
+                                  rx="2"
+                                  stroke="currentColor"
+                                  stroke-width="1.7"/>
+
+                            <path d="M3 10h18M7 15h4"
+                                  stroke="currentColor"
+                                  stroke-width="1.7"
+                                  stroke-linecap="round"/>
+
+                        </svg>
+
+                    </div>
+
+                    <div class="document-content">
+
+                        <h2>Financeiro</h2>
+
+                        <p>
+                            Acompanhe informações financeiras e
+                            consulte seus pagamentos.
+                        </p>
+
+                    </div>
+
+                    <button type="button"
+                            class="document-button"
+                            data-option="Financeiro">
+
+                        Acessar
+                        <span aria-hidden="true">→</span>
+
+                    </button>
+
+                    <span class="availability">
+                        <span class="status-dot"></span>
+                        Em breve
+                    </span>
+
+                </article>
+
+
+                <!-- Pendências -->
+                <article class="document-card">
+
+                    <div class="document-icon">
+
+                        <svg viewBox="0 0 24 24" fill="none"
+                             aria-hidden="true">
+
+                            <path d="M12 3 22 20H2L12 3Z"
+                                  stroke="currentColor"
+                                  stroke-width="1.7"
+                                  stroke-linejoin="round"/>
+
+                            <path d="M12 9v5M12 17.5v.1"
+                                  stroke="currentColor"
+                                  stroke-width="1.9"
+                                  stroke-linecap="round"/>
+
+                        </svg>
+
+                    </div>
+
+                    <div class="document-content">
+
+                        <h2>Pendências</h2>
+
+                        <p>
+                            Verifique possíveis pendências relacionadas
+                            à sua vida acadêmica.
+                        </p>
+
+                    </div>
+
+                    <button type="button"
+                            class="document-button"
+                            data-option="Pendências">
+
+                        Acessar
+                        <span aria-hidden="true">→</span>
+
+                    </button>
+
+                    <span class="availability">
+                        <span class="status-dot"></span>
+                        Em breve
+                    </span>
+
+                </article>
+
+            </section>
+
+
+            <!-- Mensagem de disponibilidade -->
+            <p class="document-message"
+               id="document-message"
+               role="status"
+               aria-live="polite">
+            </p>
+
+        </main>
+
+
+        <!-- Rodapé -->
+        <footer class="footer">
+
+            <span>© 2026 Sistema de Gestão Acadêmica</span>
+
+            <span class="footer-separator">•</span>
+
+            <span>Educação que transforma</span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="js/documento.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+
+</html>

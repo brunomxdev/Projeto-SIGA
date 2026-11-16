@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cadastre-se no Sistema de Gestão Acadêmica.">
+
+    <title>Cadastro | Sistema de Gestão Acadêmica</title>
+
+    <!-- Fonte utilizada na tela de login -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <!-- Cabeçalho -->
+        <header class="topbar">
+
+            <a class="brand" href="login.html"
+               aria-label="Sistema de Gestão Acadêmica - início">
+
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M3 9.2 12 4l9 5.2-9 5.2L3 9.2Z"
+                              stroke="currentColor"
+                              stroke-width="1.8"
+                              stroke-linejoin="round"/>
+
+                        <path d="M6.5 11.4v4.1c3.5 2.8 7.5 2.8 11 0v-4.1M21 9.2v5"
+                              stroke="currentColor"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </span>
+
+                <span>Sistema de Gestão Acadêmica</span>
+
+            </a>
+
+            <span class="topbar-label">Portal do aluno</span>
+
+        </header>
+
+
+        <!-- Conteúdo principal -->
+        <main class="main-content">
+
+            <!-- Painel lateral -->
+            <section class="welcome-panel" aria-label="Boas-vindas">
+
+                <div class="photo">
+
+                    <img
+                        src="/imagens/ft4.avif"
+                        alt="Estudantes celebrando a conclusão da vida acadêmica">
+
+                    <div class="photo-shade"></div>
+
+                    <div class="photo-copy">
+
+                        <span class="eyebrow">
+                            FAÇA PARTE DA NOSSA COMUNIDADE
+                        </span>
+
+                        <h1>Seu futuro começa aqui.</h1>
+
+                        <p>
+                            Crie sua conta e acompanhe sua jornada acadêmica
+                            em um só lugar.
+                        </p>
+
+                    </div>
+
+                    <div class="photo-dots" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Formulário de cadastro -->
+            <section class="cadastro-panel" aria-labelledby="cadastro-title">
+
+                <div class="cadastro-card">
+
+                    <div class="mini-logo" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M3 9.2 12 4l9 5.2-9 5.2L3 9.2Z"
+                                  stroke="currentColor"
+                                  stroke-width="1.8"
+                                  stroke-linejoin="round"/>
+
+                            <path d="M6.5 11.4v4.1c3.5 2.8 7.5 2.8 11 0v-4.1M21 9.2v5"
+                                  stroke="currentColor"
+                                  stroke-width="1.8"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+
+                    </div>
+
+                    <p class="welcome-label">SEJA BEM-VINDO(A)</p>
+
+                    <h2 id="cadastro-title">Crie sua conta</h2>
+
+                    <p class="subtitle">
+                        Preencha seus dados para realizar o cadastro.
+                    </p>
+
+
+                    <form id="cadastro-form" novalidate>
+
+                        <div class="fields-grid">
+
+                            <!-- Nome -->
+                            <div class="form-field full-width">
+
+                                <label for="nome">Nome completo</label>
+
+                                <div class="input-wrap">
+
+                                    <input
+                                        type="text"
+                                        id="nome"
+                                        name="nome"
+                                        placeholder="Digite seu nome completo"
+                                        autocomplete="name"
+                                        required>
+
+                                </div>
+
+                                <small class="field-error" id="nome-error"></small>
+
+                            </div>
+
+
+                            <!-- Matrícula -->
+                            <div class="form-field">
+
+                                <label for="matricula">Matrícula</label>
+
+                                <div class="input-wrap">
+
+                                    <input
+                                        type="text"
+                                        id="matricula"
+                                        name="matricula"
+                                        placeholder="Sua matrícula"
+                                        required>
+
+                                </div>
+
+                                <small class="field-error" id="matricula-error"></small>
+
+                            </div>
+
+
+                            <!-- Telefone -->
+                            <div class="form-field">
+
+                                <label for="telefone">Telefone</label>
+
+                                <div class="input-wrap">
+
+                                    <input
+                                        type="tel"
+                                        id="telefone"
+                                        name="telefone"
+                                        placeholder="(61) 99999-9999"
+                                        maxlength="15"
+                                        inputmode="tel"
+                                        autocomplete="tel"
+                                        required>
+
+                                </div>
+
+                                <small class="field-error" id="telefone-error"></small>
+
+                            </div>
+
+
+                            <!-- E-mail -->
+                            <div class="form-field full-width">
+
+                                <label for="email">E-mail institucional</label>
+
+                                <div class="input-wrap">
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="nome@instituicao.edu.br"
+                                        autocomplete="email"
+                                        required>
+
+                                </div>
+
+                                <small class="field-error" id="email-error"></small>
+
+                            </div>
+
+
+                            <!-- Curso -->
+                            <div class="form-field full-width">
+
+                                <label for="curso">Curso</label>
+
+                                <div class="input-wrap">
+
+                                    <select id="curso" name="curso" required>
+
+                                        <option value="">Selecione seu curso</option>
+
+                                        <option value="ads">
+                                            Análise e Desenvolvimento de Sistemas
+                                        </option>
+
+                                        <option value="si">
+                                            Sistemas de Informação
+                                        </option>
+
+                                        <option value="cc">
+                                            Ciência da Computação
+                                        </option>
+
+                                        <option value="eng">
+                                            Engenharia de Software
+                                        </option>
+
+                                        <option value="outro">
+                                            Outro
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <small class="field-error" id="curso-error"></small>
+
+                            </div>
+
+
+                            <!-- Senha -->
+                            <div class="form-field">
+
+                                <label for="senha">Senha</label>
+
+                                <div class="input-wrap">
+
+                                    <input
+                                        type="password"
+                                        id="senha"
+                                        name="senha"
+                                        class="password-field"
+                                        placeholder="Mínimo de 6 caracteres"
+                                        autocomplete="new-password"
+                                        minlength="6"
+                                        required>
+
+                                    <button
+                                        class="toggle-password"
+                                        type="button"
+                                        data-target="senha"
+                                        aria-label="Mostrar senha"
+                                        aria-pressed="false">
+
+                                        <svg viewBox="0 0 24 24" fill="none"
+                                             aria-hidden="true">
+
+                                            <path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"
+                                                  stroke="currentColor"
+                                                  stroke-width="1.7"/>
+
+                                            <circle cx="12" cy="12" r="2.6"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.7"/>
+
+                                        </svg>
+
+                                    </button>
+
+                                </div>
+
+                                <small class="field-error" id="senha-error"></small>
+
+                            </div>
+
+
+                            <!-- Confirmar senha -->
+                            <div class="form-field">
+
+                                <label for="confirmar-senha">
+                                    Confirmar senha
+                                </label>
+
+                                <div class="input-wrap">
+
+                                    <input
+                                        type="password"
+                                        id="confirmar-senha"
+                                        name="confirmar-senha"
+                                        class="password-field"
+                                        placeholder="Repita sua senha"
+                                        autocomplete="new-password"
+                                        required>
+
+                                    <button
+                                        class="toggle-password"
+                                        type="button"
+                                        data-target="confirmar-senha"
+                                        aria-label="Mostrar senha"
+                                        aria-pressed="false">
+
+                                        <svg viewBox="0 0 24 24" fill="none"
+                                             aria-hidden="true">
+
+                                            <path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"
+                                                  stroke="currentColor"
+                                                  stroke-width="1.7"/>
+
+                                            <circle cx="12" cy="12" r="2.6"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.7"/>
+
+                                        </svg>
+
+                                    </button>
+
+                                </div>
+
+                                <small class="field-error"
+                                       id="confirmar-senha-error"></small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Botão de cadastro -->
+                        <button class="submit-button" type="submit">
+
+                            <span>Criar cadastro</span>
+
+                            <svg viewBox="0 0 24 24" fill="none"
+                                 aria-hidden="true">
+
+                                <path d="M5 12h14m-6-6 6 6-6 6"
+                                      stroke="currentColor"
+                                      stroke-width="1.8"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+
+                            </svg>
+
+                        </button>
+
+
+                        <!-- Mensagem de feedback -->
+                        <p class="form-message"
+                           id="form-message"
+                           role="status"
+                           aria-live="polite">
+                        </p>
+
+                    </form>
+
+
+                    <!-- Retorno ao login -->
+                    <div class="login-link">
+
+                        <span>Já possui uma conta?</span>
+
+                        <a href="login.html">Fazer login</a>
+
+                    </div>
+
+
+                    <p class="security-note">
+
+                        <svg viewBox="0 0 24 24" fill="none"
+                             aria-hidden="true">
+
+                            <path d="M12 3 19 6v5c0 4.5-3 7.8-7 10-4-2.2-7-5.5-7-10V6l7-3Z"
+                                  stroke="currentColor"
+                                  stroke-width="1.6"
+                                  stroke-linejoin="round"/>
+
+                            <path d="m9 12 2 2 4-4"
+                                  stroke="currentColor"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+
+                        </svg>
+
+                        Ambiente de cadastro protegido
+
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Rodapé -->
+        <footer class="footer">
+
+            <span>© 2026 Sistema de Gestão Acadêmica</span>
+
+            <span class="footer-separator" aria-hidden="true">•</span>
+
+            <span>Educação que transforma</span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="js/cadastro.js"></script>
+
+</body>
+</html>

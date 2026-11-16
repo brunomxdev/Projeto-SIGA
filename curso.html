@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Consulte seus cursos no Sistema de Gestão Acadêmica.">
+
+    <title>Meus Cursos | Sistema de Gestão Acadêmica</title>
+
+    <!-- Fonte padrão do SIGA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/curso.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <!-- Cabeçalho -->
+        <header class="topbar">
+
+            <a class="brand" href="index.html">
+
+                <span class="brand-mark" aria-hidden="true">
+
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M3 9.2 12 4l9 5.2-9 5.2L3 9.2Z"
+                              stroke="currentColor"
+                              stroke-width="1.8"
+                              stroke-linejoin="round"/>
+
+                        <path d="M6.5 11.4v4.1c3.5 2.8 7.5 2.8 11 0v-4.1M21 9.2v5"
+                              stroke="currentColor"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+
+                </span>
+
+                <span>Sistema de Gestão Acadêmica</span>
+
+            </a>
+
+            
+            <div class="header-actions">
+
+                <span class="topbar-label">Portal do aluno</span>
+
+                <nav class="menu-navegacao" aria-label="Navegação principal">
+                    <button
+                        type="button"
+                        class="menu-botao"
+                        aria-expanded="false"
+                        aria-controls="menu-opcoes">
+                        ☰ Menu
+                    </button>
+
+                    <div class="menu-opcoes" id="menu-opcoes" hidden>
+                        <a href="index.html">Página inicial</a>
+                        <a href="curso.html" aria-current="page">Meus Cursos</a>
+                        <a href="calendario.html">Calendário</a>
+                        <a href="documento.html">Documentos</a>
+                    </div>
+                </nav>
+
+                <a href="login.html" class="logout-link">Sair</a>
+
+            </div>
+
+
+        </header>
+
+
+        <!-- Conteúdo principal -->
+        <main class="container">
+
+            <!-- Apresentação -->
+            <section class="page-heading">
+
+                <div>
+
+                    <p class="welcome-label">ÁREA DO ALUNO</p>
+
+                    <h1>Meus Cursos</h1>
+
+                    <p class="page-description">
+                        Consulte seus cursos e acompanhe sua jornada acadêmica.
+                    </p>
+
+                </div>
+
+                <div class="course-counter">
+                    <span class="counter-number" id="course-count">8</span>
+                    <span>cursos disponíveis</span>
+                </div>
+
+            </section>
+
+
+            <!-- Pesquisa -->
+            <section class="search-section">
+
+                <label for="busca">Pesquisar cursos</label>
+
+                <div class="search-box">
+
+                    <svg viewBox="0 0 24 24" fill="none"
+                         aria-hidden="true">
+
+                        <circle cx="10.8" cy="10.8" r="6.8"
+                                stroke="currentColor"
+                                stroke-width="1.8"/>
+
+                        <path d="m16 16 4.5 4.5"
+                              stroke="currentColor"
+                              stroke-width="1.8"
+                              stroke-linecap="round"/>
+
+                    </svg>
+
+                    <input
+                        type="search"
+                        id="busca"
+                        placeholder="Digite o nome do curso..."
+                        autocomplete="off">
+
+                </div>
+
+            </section>
+
+
+            <!-- Grade de cursos -->
+            <section class="grade-cursos" aria-label="Lista de cursos">
+
+
+                <!-- Curso 1 -->
+                <article class="card">
+
+                    <img
+                        src="imagens/andras-vas.jpg"
+                        alt="Algoritmos e Programação"
+                        class="card-img">
+
+                    <div class="card-corpo">
+
+                        <span class="course-category">Programação</span>
+
+                        <h2>Algoritmos e Programação</h2>
+
+                        <p>
+                            Aprenda a lógica de programação do zero.
+                        </p>
+
+                        <a href="#" class="botao" data-course="Algoritmos e Programação">
+                            Acessar curso
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Curso 2 -->
+                <article class="card">
+
+                    <img
+                        src="imagens/banco_de_dados.jpg"
+                        alt="Banco de Dados"
+                        class="card-img">
+
+                    <div class="card-corpo">
+
+                        <span class="course-category">Tecnologia</span>
+
+                        <h2>Banco de Dados</h2>
+
+                        <p>
+                            Aprenda a criar e gerenciar tabelas SQL.
+                        </p>
+
+                        <a href="#" class="botao" data-course="Banco de Dados">
+                            Acessar curso
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Curso 3 -->
+                <article class="card">
+
+                    <img
+                        src="imagens/Desenvolvimento_Web.jpg"
+                        alt="Desenvolvimento Web"
+                        class="card-img">
+
+                    <div class="card-corpo">
+
+                        <span class="course-category">Desenvolvimento</span>
+
+                        <h2>Desenvolvimento Web</h2>
+
+                        <p>
+                            Crie sites modernos usando HTML, CSS e JavaScript.
+                        </p>
+
+                        <a href="#" class="botao" data-course="Desenvolvimento Web">
+                            Acessar curso
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Curso 4 -->
+                <article class="card">
+
+                    <img
+                        src="imagens/Engenharia_de_Software.jpg"
+                        alt="Engenharia de Software"
+                        class="card-img">
+
+                    <div class="card-corpo">
+
+                        <span class="course-category">Desenvolvimento</span>
+
+                        <h2>Engenharia de Software</h2>
+
+                        <p>
+                            Conheça os processos e métodos de desenvolvimento de software.
+                        </p>
+
+                        <a href="#" class="botao" data-course="Engenharia de Software">
+                            Acessar curso
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Curso 5 -->
+                <article class="card">
+
+                    <img
+                        src="imagens/Inteligencia_Artificial.jpg"
+                        alt="Inteligência Artificial"
+                        class="card-img">
+
+                    <div class="card-corpo">
+
+                        <span class="course-category">Tecnologia</span>
+
+                        <h2>Inteligência Artificial</h2>
+
+                        <p>
+                            Explore os conceitos e aplicações da inteligência artificial.
+                        </p>
+
+                        <a href="#" class="botao" data-course="Inteligência Artificial">
+                            Acessar curso
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Curso 6 -->
+                <article class="card">
+
+                    <img
+                        src="imagens/Infraestruturade_de_Redes.jpg"
+                        alt="Infraestrutura de Redes"
+                        class="card-img">
+
+                    <div class="card-corpo">
+
+                        <span class="course-category">Infraestrutura</span>
+
+                        <h2>Infraestrutura de Redes</h2>
+
+                        <p>
+                            Aprenda sobre redes de computadores e comunicação de dados.
+                        </p>
+
+                        <a href="#" class="botao" data-course="Infraestrutura de Redes">
+                            Acessar curso
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Curso 7 -->
+                <article class="card">
+
+                    <img
+                        src="imagens/Sistemas_Operacionais.jpg"
+                        alt="Sistemas Operacionais"
+                        class="card-img">
+
+                    <div class="card-corpo">
+
+                        <span class="course-category">Infraestrutura</span>
+
+                        <h2>Sistemas Operacionais</h2>
+
+                        <p>
+                            Conheça o funcionamento e gerenciamento dos sistemas operacionais.
+                        </p>
+
+                        <a href="#" class="botao" data-course="Sistemas Operacionais">
+                            Acessar curso
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Curso 8 -->
+                <article class="card">
+
+                    <img
+                        src="imagens/Robotica.jpg"
+                        alt="Robótica"
+                        class="card-img">
+
+                    <div class="card-corpo">
+
+                        <span class="course-category">Tecnologia</span>
+
+                        <h2>Robótica</h2>
+
+                        <p>
+                            Conheça os fundamentos da robótica e da automação.
+                        </p>
+
+                        <a href="#" class="botao" data-course="Robótica">
+                            Acessar curso
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- Mensagem quando não encontrar cursos -->
+            <div class="empty-message" id="empty-message" hidden>
+
+                <h2>Nenhum curso encontrado</h2>
+
+                <p>
+                    Tente pesquisar utilizando outro nome.
+                </p>
+
+            </div>
+
+
+            <!-- Feedback de acesso -->
+            <p class="course-message" id="course-message"
+               role="status" aria-live="polite">
+            </p>
+
+        </main>
+
+
+        <!-- Rodapé -->
+        <footer class="footer">
+
+            <span>© 2026 Sistema de Gestão Acadêmica</span>
+
+            <span class="footer-separator">•</span>
+
+            <span>Educação que transforma</span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="js/curso.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+</html>
